@@ -1,0 +1,29 @@
+<div class="col-md-6">
+    <h2> Item Details</h2> 
+    
+    <table class="table table-striped">
+      <thead>
+        <tr>
+        <th class="hidden">Id</th>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Tax</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of items">
+        <td class="hidden">{{item.id}}</td>
+        <td>{{item.code}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.category}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.tax}}</td>
+        <td><button class="btn btn-success" (click)="editItem(item)"> Update</button> &nbsp; <button class="btn btn-danger" (click)="deleteItem(item)"> Delete</button></td>
+        
+      </tbody>
+    </table>
+    </div>
+    

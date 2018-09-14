@@ -1,0 +1,36 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Item</h2>
+  <form>
+  <div class="form-group">
+    <label for="code">Code:</label>
+    <input [(ngModel)]="item.code" placeholder="Code" name="code" class="form-control" id="code" required>
+     </div>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input [(ngModel)]="item.name" placeholder="Name" name="name" class="form-control" id="name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="category">Category:</label>
+    <input [(ngModel)]="item.category" placeholder="Category" name="category" class="form-control" id="category" required>
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input [(ngModel)]="item.price" placeholder="Price" name="price" class="form-control" id="price" required>
+  </div>
+
+  <div class="form-group">
+    <label for="tax">Tax:</label>
+    <input [(ngModel)]="item.tax" placeholder="Tax" name="tax" class="form-control" id="tax" required>
+  </div>
+ <div class="hidden">{{item.id}}</div>
+
+  <button class="btn btn-success"  *ngIf="!item.id" (click)="createItem()">Add</button>
+  <button class="btn btn-success"  *ngIf="item.id" (click)="updateItem()">Update</button>
+
+  <a routerLink="/listitem"><button class="btn">Back</button>
+</a>
+
+</form>
+</div>

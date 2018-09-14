@@ -1,0 +1,44 @@
+<div class="col-md-6">
+        <h2 class="text-center">Add Supplier</h2>
+      <form>
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <input [(ngModel)]="supplier.address" placeholder="Address" name="address" class="form-control" id="address">
+        </div>
+      
+        <div class="form-group">
+          <label for="city">City:</label>
+          <input [(ngModel)]="supplier.city" placeholder="City" name="city" class="form-control" id="city">
+        </div>
+      
+        <div class="form-group">
+          <label for="company">Company:</label>
+          <input [(ngModel)]="supplier.company" placeholder="Company" name="company" class="form-control" id="company">
+        </div>
+      
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" [(ngModel)]="supplier.email" placeholder="Email" name="email" class="form-control" id="email">
+        </div>
+      
+       
+        <div class="form-group">
+                <label for="mobile">Mobile:</label>
+                <input [(ngModel)]="supplier.mobile" placeholder="Mobile" name="mobile" class="form-control" id="mobile">
+              </div>
+       <div class="hidden">{{supplier.id}}</div>
+      
+        <button class="btn btn-success" *ngIf="!supplier.id" (click)="createSupplier()">Register</button>
+        <button class="btn btn-success" *ngIf="supplier.id" (click)="updateSupplier()">Update</button>
+     <a routerLink="/listitem"><button class="btn">Back</button>
+      </a>
+      <br/>
+      <br/>
+      <div colspan="4">
+        <input type="text" [(ngModel)]="queryString"placeholder="Search">
+      </div>
+      </form>
+      </div>
+
+     
+      

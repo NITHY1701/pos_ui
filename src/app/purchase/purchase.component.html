@@ -1,0 +1,52 @@
+<div class="col-md-6">
+  <h2 class="text-center">Purchase Control</h2>
+  <form>
+  <div class="form-group">
+    <label for="date">Date:</label>
+    <input type="date" class="form-control" id="BirthDate" name="BirthDate"
+[ngModel]="purchase.birthDate | date:'yyyy-MM-dd'"required>
+  </div>
+
+  <div class="form-group">
+    <label for="discount">Discount:</label>
+    <input [(ngModel)]="purchase.discount" placeholder="Discount" name="discount" class="form-control" id="discount">
+  </div>
+
+  <div class="form-group">
+    <label for="invoiceNo">Invoice No:</label>
+    <input [(ngModel)]="purchase.invoiceNo" placeholder="Invoice No" name="invoiceNo" class="form-control" id="invoiceNo">
+  </div>
+
+  <div class="form-group">
+    <label for="netAmount">Net Amount:</label>
+    <input [(ngModel)]="purchase.netAmount" placeholder="Net Amount" name="netAmount" class="form-control" id="netAmount">
+  </div>
+
+  <div class="form-group">
+    <label for="paidAmount">Paid Amount:</label>
+    <input [(ngModel)]="purchase.paidAmount" placeholder="Paid Amount" name="paidAmount" class="form-control" id="paidAmount">
+  </div>
+  <div class="form-group">
+    <label for="paymentType">Payment Type:</label>
+    <input [(ngModel)]="purchase.paymentType" placeholder="Payment Type" name="paymentType" class="form-control" id="paymentType">
+  </div>
+
+  <div class="form-group">
+    <label for="remainingAmount">Remaining Amount:</label>
+    <input [(ngModel)]="purchase.remainingAmount" placeholder="Remaining Amount" name="remainingAmount" class="form-control" id="remainingAmount">
+  </div>
+  <div class="form-group">
+    <label for="supplierId">Supplier Id:</label>
+    <input [(ngModel)]="purchase.supplierId" placeholder="Supplier Id" name="supplierId" class="form-control" id="supplierId">
+  </div>
+
+  <div class="form-group">
+    <label for="totAmount">Total Amount:</label>
+    <input [(ngModel)]="purchase.totAmount" placeholder="Total Amount" name="totAmount" class="form-control" id="totAmount">
+  </div>
+ <button class="btn btn-success"(click)="createPurOrder()">Add</button>
+ <a routerLink="/listsup"><button class="btn">Back</button>
+</a>
+
+</form>
+</div>
